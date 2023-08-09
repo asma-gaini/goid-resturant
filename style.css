@@ -1,0 +1,133 @@
+@font-face {
+    font-family: American Typewriter;
+    src: url(./fonts/AmericanTypewriterBQ-Bold.otf);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #0c0c0c;
+    background-color: var(--white);
+    box-sizing: border-box;
+}
+
+p {
+    color: var(--primary);
+}
+
+a{
+    cursor: pointer;
+}
+
+  /* main */
+.main_section{
+    position: relative;
+}
+
+  /* main--->blue box in left page */
+.blue-box{
+    width: 275px;
+    height: 738px;
+    background-color: var(--blue);
+}
+.blue-box_navbar{
+    width: 140px;
+}
+.blue-box img{
+    width: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.blue-box span{
+    text-transform: uppercase;
+    font-size: 22px;
+    color: var(--white);
+    margin-top: 5px;
+    font-family: 'American Typewriter', sans-serif;
+    font-weight: 400;
+}
+
+  /* main--->slider */
+.slide-show{
+    position: absolute;
+    left: 140px;
+    top: 110px;
+    z-index: 1;
+    width: 400px;
+    max-width: 400px;
+    padding: 75px 0 60px 0;
+    background-color: var(--white);
+    border-radius: 25px;
+    box-shadow: 2px 10px 25px 0 var(--box-shadow);
+    height: 450px;
+    margin: auto;
+}
+
+  /* main--->information box */
+.detail-box{
+    position: absolute;
+    left:45vw;
+    margin-right: 200px;
+    margin-top: 136px;
+}
+.detail-box_info h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3.5rem;
+    font-family: 'American Typewriter', sans-serif;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.detail-box_info p{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--primary);
+    text-align: left;
+}
+  /* main--->information box-->btn */
+.detail-box_btn{
+    margin-top: 35px;
+}
+.detail-box_btn a{
+    text-align: center;
+    width: 180px;
+    text-decoration: none;
+}
+.btn-1{
+    display: inline-block;
+    padding: 10px 0px;
+    background-color: var(--btn-blue);
+    color: var(--white);
+    border: 1px solid var(--btn-blue);
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+.btn-2{
+    display: inline-block;
+    padding: 10px 0px;
+    background-color: var(--btn-black);
+    color: #ffffff;
+    border: 1px solid var(--btn-black);
+    text-transform: uppercase;
+}
+
+.dropdown-menue{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+.dropdown-menue svg{
+    width: 50px;
+    height: 50px;
+}
+.dropdown-menue a{
+    padding: 0px;
+    text-decoration: none;
+    font-size: 22px;
+    /* color: var(--white); */
+    color: black;
+    display: block;
+    text-transform: uppercase;
+}
