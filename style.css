@@ -66,9 +66,9 @@ a{
   /* main--->information box */
 .detail-box{
     position: absolute;
+    top: 200px;
     left:45vw;
     margin-right: 200px;
-    margin-top: 136px;
 }
 .detail-box_info h1{
     text-transform: uppercase;
@@ -148,6 +148,6 @@ a{
 .dropdown-menue_contant ul li{
     margin: 10px;
 }
-.dropdown-menue_btn:hover .dropdown-menue_contant{
+.dropdown-menue:hover .dropdown-menue_contant{
     display: flex;
 }
