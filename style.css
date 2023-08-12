@@ -1,3 +1,4 @@
+/* primary css */
 @font-face {
     font-family: American Typewriter;
     src: url(./fonts/AmericanTypewriterBQ-Bold.otf);
@@ -129,7 +130,7 @@ a{
     border: 1px solid var(--btn-black);
     text-transform: uppercase;
 }
-
+/* main--->dropdown */
 .dropdown-menue{
     position: absolute;
     right: 10px;
@@ -167,4 +168,63 @@ a{
 }
 .dropdown-menue:hover .dropdown-menue_contant{
     display: flex;
+}
+
+
+.about-our-food_section{
+    display: flex;
+}
+.about-our-food_section_information{
+    margin-left: 200px;
+    padding-top: 110px;
+}
+.about-our-food_section_information_heading{
+    display: flex;
+    align-items: center;
+}
+.about-our-food_section_information_heading h2{
+    font-weight: bold;
+    color: var(--h2);
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.about-our-food_section_information_heading hr{
+    margin: 0 10px;
+    border: none;
+    width: 200px;
+    max-width: 200px;
+    height: 3px;
+    background-color: var(--btn-blue);
+}
+.about-our-food_section_information p{
+    margin-top: 20px;
+    color: var(--p);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    margin-right: 35px;
+
+}
+.about-our-food_section_information_btn{
+    display: inline-block;
+    padding: 8px 35px;
+    background-color: var(--btn-black);
+    color: var(--white);
+    border: 1px solid var(--btn-black);
+    margin-top: 30px;
+    text-decoration: none;
+}
+.about-our-food_section_image{
+    width: 100%;
+}
+.about-our-food_section_image img{
+    vertical-align: middle;
+    border-style: none;
+    width: 724px;
+    height: 524px;
+    margin-bottom: 50px;
 }
