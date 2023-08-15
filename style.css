@@ -345,12 +345,16 @@ a{
     border-left: none;
     border-right: none;
 }
+
 .whats-hot_section_menue-slideShow_slider{
     width: 350px;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
+}
+.whats-hot_section_menue-slideShow_slider{
+    display: none;
 }
 .whats-hot_section_menue-slideShow_slider a{
     display: inline-block;
