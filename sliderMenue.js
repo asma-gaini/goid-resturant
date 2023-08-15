@@ -5,6 +5,7 @@ class sliderMenue{
         this.options = options;
         this.intialStuff();
         this.createNextAndPrevBtns();
+        this.showSlides(1);
     }
 
     // Validation and get children  main class in  array 
@@ -20,11 +21,23 @@ class sliderMenue{
      // creat Next & previous buttons and link with count slideIndex 
      createNextAndPrevBtns(){
         let { el : sliderElement } = this.options;
-        console.log(sliderElement)
         sliderElement.insertAdjacentHTML('beforeend' , `
             <a class="prev_menue">&#10094;</a>
             <a class="next_menue">&#10095;</a>
         `);
 
+        sliderElement.querySelector('.next_menue').addEventListener('click' , () => this.incrementSlide())
+        sliderElement.querySelector('.prev_menue').addEventListener('click' , () => this.decrementSlide())
+    }
+
+    incrementSlide = () => this.showSlides(this.slideIndex += 1)
+    decrementSlide = () => this.showSlides(this.slideIndex -= 1)
+    
+    
+    showSlides(indexCounter){
+        let { el : sliderElement } = this.options;
+        if(indexCounter > this.sliders.length) this.slideIndex = 1;
+        if(indexCounter < 1 ) this.slideIndex = this.sliders.length;
+        
     }
 }
