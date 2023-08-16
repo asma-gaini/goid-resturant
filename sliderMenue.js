@@ -41,8 +41,10 @@ class sliderMenue{
 
         var holdIndex = [...sliderElement.children].filter(elm => elm.classList.contains('active'));
         holdIndex[0].classList.remove('active');
-        
-        console.log(holdIndex)
+        let temp  = this.sliders.findIndex(elm => elm.classList.contains('active'));
+        this.sliders[temp+2].classList.add('active')
+
+        console.log(temp)
         // let target=sliderElement.querySelector(`.${slideClass}.active`).classList.remove('active');
     }
 }
