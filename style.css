@@ -356,6 +356,9 @@ a{
 .whats-hot_section_menue-slideShow_slider{
     display: none;
 }
+.whats-hot_section_menue-slideShow_slider.active {
+    display: block;
+}
 .whats-hot_section_menue-slideShow_slider a{
     display: inline-block;
     padding: 8px 35px;

@@ -35,9 +35,14 @@ class sliderMenue{
     
     
     showSlides(indexCounter){
-        let { el : sliderElement } = this.options;
+        let { el : sliderElement , slideClass , currentSlider } = this.options;
         if(indexCounter > this.sliders.length) this.slideIndex = 1;
         if(indexCounter < 1 ) this.slideIndex = this.sliders.length;
+
+        var holdIndex = [...sliderElement.children].filter(elm => elm.classList.contains('active'));
+        holdIndex[0].classList.remove('active');
         
+        console.log(holdIndex)
+        // let target=sliderElement.querySelector(`.${slideClass}.active`).classList.remove('active');
     }
 }
