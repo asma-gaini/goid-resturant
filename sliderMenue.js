@@ -32,19 +32,43 @@ class sliderMenue{
 
     incrementSlide = () => this.showSlides(this.slideIndex += 1)
     decrementSlide = () => this.showSlides(this.slideIndex -= 1)
+
     
     
     showSlides(indexCounter){
         let { el : sliderElement , slideClass , currentSlider } = this.options;
         if(indexCounter > this.sliders.length) this.slideIndex = 1;
         if(indexCounter < 1 ) this.slideIndex = this.sliders.length;
-
         var holdIndex = [...sliderElement.children].filter(elm => elm.classList.contains('active'));
-        holdIndex[0].classList.remove('active');
-        let temp  = this.sliders.findIndex(elm => elm.classList.contains('active'));
-        this.sliders[temp+2].classList.add('active')
 
+        console.log(holdIndex)
+        console.log(holdIndex[0])
+
+        holdIndex[0].classList.remove('active');
+
+        console.log(holdIndex)
+
+        var temp  = this.sliders.findIndex(elm => elm.classList.contains('active'));
         console.log(temp)
-        // let target=sliderElement.querySelector(`.${slideClass}.active`).classList.remove('active');
+
+        var ComputingIndex = temp+2
+        console.log(ComputingIndex)
+
+
+        var nextIndex=(ComputingIndex % this.sliders.length);
+        console.log(nextIndex);
+
+       
+        if(nextIndex == 0) {
+            nextIndex = this.sliders.length;
+            console.log(nextIndex)
+
+            this.sliders[nextIndex-1].classList.add('active');
+        }else{ this.sliders[nextIndex].classList.add('active');
+        // console.log(nextIndex)
+        }
+
+
+       
     }
 }
