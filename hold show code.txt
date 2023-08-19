@@ -1,0 +1,28 @@
+    // showSlides(indexCounter){
+    //     let { el : sliderElement , slideClass , currentSlider } = this.options;
+    //     if(indexCounter > this.sliders.length) 
+    //         this.slideIndex = 1;
+    //     if(indexCounter < 1 ) 
+    //         this.slideIndex = this.sliders.length;
+    //     var holdIndex = [...sliderElement.children].filter(elm => elm.classList.contains('active'));
+
+    //     holdIndex[0].classList.remove('active');
+    //     var temp  = this.sliders.findIndex(elm => elm.classList.contains('active'));
+    //     var ComputingIndex = temp+2;
+
+
+    //     var nextIndex=(ComputingIndex % this.sliders.length); 
+    //     if(nextIndex == 0) {
+    //         nextIndex = 0;
+    //         this.sliders[nextIndex].classList.add('active');
+    //         nextIndex++;
+    //         temp++;
+    //     }
+
+    //     else if(temp==this.sliders.length){
+    //         temp=1;
+    //         this.sliders[nextIndex].classList.add('active')
+    //     }
+
+    //     else{ this.sliders[nextIndex].classList.add('active');}
+    // }

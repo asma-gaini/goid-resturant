@@ -1,11 +1,15 @@
 class sliderMenue{
-    slideIndex = 1;
+    slideIndex = 0;
+    min =0;
+    max =0;
 
     constructor(options){
         this.options = options;
         this.intialStuff();
         this.createNextAndPrevBtns();
-        this.showSlides(1);
+        this.primaryComputing();
+        this.right();
+        // this.showSlides();
     }
 
     // Validation and get children  main class in  array 
@@ -33,42 +37,24 @@ class sliderMenue{
     incrementSlide = () => this.showSlides(this.slideIndex += 1)
     decrementSlide = () => this.showSlides(this.slideIndex -= 1)
 
-    
-    
-    showSlides(indexCounter){
+    primaryComputing(){
         let { el : sliderElement , slideClass , currentSlider } = this.options;
-        if(indexCounter > this.sliders.length) this.slideIndex = 1;
-        if(indexCounter < 1 ) this.slideIndex = this.sliders.length;
-        var holdIndex = [...sliderElement.children].filter(elm => elm.classList.contains('active'));
-
-        console.log(holdIndex)
-        console.log(holdIndex[0])
-
-        holdIndex[0].classList.remove('active');
-
-        console.log(holdIndex)
-
-        var temp  = this.sliders.findIndex(elm => elm.classList.contains('active'));
-        console.log(temp)
-
-        var ComputingIndex = temp+2
-        console.log(ComputingIndex)
-
-
-        var nextIndex=(ComputingIndex % this.sliders.length);
-        console.log(nextIndex);
-
-       
-        if(nextIndex == 0) {
-            nextIndex = this.sliders.length;
-            console.log(nextIndex)
-
-            this.sliders[nextIndex-1].classList.add('active');
-        }else{ this.sliders[nextIndex].classList.add('active');
-        // console.log(nextIndex)
+        let holdIndex = [];
+       //peymash az ax aval ta akhar bra peyda kardan index activ ha va rikhtan mode index ha dar array holdIndex
+        for (let index = 0; index < this.sliders.length; index++) {
+            if(this.sliders[index].classList.contains('active')){
+                let modeIndex = index % this.sliders.length;
+                holdIndex.push(modeIndex);
+                console.log(index);
+                console.log(modeIndex);
+            }
         }
-
-
-       
+        console.log(holdIndex);
+        this.min = Math.min(...holdIndex);
+        console.log(this.min);
+        this.max = Math.max(...holdIndex);
+        console.log(this.max);
     }
+    
+
 }
