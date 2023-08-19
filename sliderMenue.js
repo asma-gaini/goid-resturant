@@ -10,6 +10,7 @@ class sliderMenue{
         this.createNextAndPrevBtns();
         this.primaryComputing();
         this.right();
+        this.left();
         // this.showSlides();
     }
 
@@ -32,11 +33,8 @@ class sliderMenue{
         `);
 
         sliderElement.querySelector('.next_menue').addEventListener('click' , () => this.right())
-        // sliderElement.querySelector('.prev_menue').addEventListener('click' , () => this.decrementSlide())
+        sliderElement.querySelector('.prev_menue').addEventListener('click' , () => this.left())
     }
-
-    // incrementSlide = () => this.showSlides(this.slideIndex += 1)
-    // decrementSlide = () => this.showSlides(this.slideIndex -= 1)
 
     primaryComputing(){
         let { el : sliderElement , slideClass , currentSlider } = this.options;
@@ -58,8 +56,8 @@ class sliderMenue{
     
     right(){
         let { el : sliderElement , slideClass , currentSlider } = this.options;
-        console.log(this.min);
-        console.log(this.max);
+        // console.log(this.min);
+        // console.log(this.max);
         this.sliders[(this.min% this.sliders.length)].classList.remove('active');
         this.min++;
         this.max++;
@@ -69,9 +67,41 @@ class sliderMenue{
             this.sliders[modeIndex].classList.add('active');
             this.holdIndex.push(modeIndex);
         }
+        // console.log(this.holdIndex);
+        // console.log(this.min);
+        // console.log(this.max);
+    }
+    
+    left(){
+        // let { el : sliderElement , slideClass , currentSlider } = this.options;
+        console.log(this.min);
+        console.log(this.max);
+        if((this.max % this.sliders.length)<0){
+            this.sliders[(this.max % this.sliders.length) + this.sliders.length].classList.remove('active');
+        }
+        else{
+            this.sliders[(this.max % this.sliders.length)].classList.remove('active');
+        }
+        this.min--;
+        this.max--;
+        console.log(this.min);
+        console.log(this.max);
+        console.log("bad kam kardan");
+
+        this.holdIndex = [];
+        for (let i = this.min; i <= this.max; i++) {
+            let modeIndex = i % this.sliders.length;
+            if (modeIndex < 0) {
+                modeIndex += this.sliders.length;
+            }
+            this.sliders[modeIndex].classList.add('active');
+            this.holdIndex.push(modeIndex);
+        }
         console.log(this.holdIndex);
         console.log(this.min);
         console.log(this.max);
+        console.log("dor tamom shod");
+
     }
 
 }
