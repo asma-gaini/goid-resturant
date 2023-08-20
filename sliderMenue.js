@@ -58,7 +58,12 @@ class sliderMenue{
         let { el : sliderElement , slideClass , currentSlider } = this.options;
         // console.log(this.min);
         // console.log(this.max);
-        this.sliders[(this.min% this.sliders.length)].classList.remove('active');
+        if((this.min % this.sliders.length)<0){
+            this.sliders[(this.min % this.sliders.length) + this.sliders.length].classList.remove('active');
+        }
+        else{
+            this.sliders[(this.min % this.sliders.length)].classList.remove('active');
+        }
         this.min++;
         this.max++;
         this.holdIndex = [];
@@ -74,8 +79,8 @@ class sliderMenue{
     
     left(){
         // let { el : sliderElement , slideClass , currentSlider } = this.options;
-        console.log(this.min);
-        console.log(this.max);
+        // console.log(this.min);
+        // console.log(this.max);
         if((this.max % this.sliders.length)<0){
             this.sliders[(this.max % this.sliders.length) + this.sliders.length].classList.remove('active');
         }
@@ -84,9 +89,9 @@ class sliderMenue{
         }
         this.min--;
         this.max--;
-        console.log(this.min);
-        console.log(this.max);
-        console.log("bad kam kardan");
+        // console.log(this.min);
+        // console.log(this.max);
+        // console.log("bad kam kardan");
 
         this.holdIndex = [];
         for (let i = this.min; i <= this.max; i++) {
@@ -97,10 +102,10 @@ class sliderMenue{
             this.sliders[modeIndex].classList.add('active');
             this.holdIndex.push(modeIndex);
         }
-        console.log(this.holdIndex);
-        console.log(this.min);
-        console.log(this.max);
-        console.log("dor tamom shod");
+        // console.log(this.holdIndex);
+        // console.log(this.min);
+        // console.log(this.max);
+        // console.log("dor tamom shod");
 
     }
 
