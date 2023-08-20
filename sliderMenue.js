@@ -11,6 +11,7 @@ class sliderMenue{
         this.primaryComputing();
         this.right();
         this.left();
+        this.setInterval();
         // this.showSlides();
     }
 
@@ -107,6 +108,10 @@ class sliderMenue{
         // console.log(this.max);
         // console.log("dor tamom shod");
 
+    }
+
+    setInterval() {
+        this.intervalID = setInterval(() => this.right(), this.auto);
     }
 
 }
