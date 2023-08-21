@@ -358,7 +358,6 @@ a{
     border-left: none;
     border-right: none;
 }
-
 .whats-hot_section_menue-slideShow_slider{
     width: 350px;
     display: flex;
@@ -443,6 +442,8 @@ a{
     max-width: 100%
 }
 
+
+  /* comment--->header */
 .comment_header{
     display: flex;
     align-items: center;
@@ -463,4 +464,52 @@ a{
     font-size: 2rem;
     margin-bottom: 0.5rem;
     line-height: 1.2;
+}
+
+/* comment */
+.comment{
+    width: 100%;
+    padding: 10% 0%;
+}
+
+  /*comment--->comment_show */
+.comment_show{
+    padding: 60px 300px;
+}
+.slide_show{
+    padding-bottom: 30px;
+    display: none;
+}
+.slide_show.active {
+    display: block;
+}
+.slide_show p{
+    margin-top: 30px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+.slide_show_header{
+    display: flex;
+    align-items: center;
+}
+.slide_show_header h4{
+    margin: 0;
+    margin-left: 15px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.comment_show_carousel{
+    display: flex;
+    justify-content: center;
+    list-style-type: disc;
+    font-size: 50px;
+}
+.comment_show_carousel li.active{
+    color: var(--hover-btn);
+}
+.comment_show_carousel li{
+    padding: 0px 10px;
 }
