@@ -19,6 +19,7 @@ new sliderMenue({
 
 new sliderComment({
     el: document.querySelector('.comment_show'),
+    elCarousel : document.querySelector('.comment_show_carousel'),
     slideClass : 'slide_show',
     auto : 3000
 })
