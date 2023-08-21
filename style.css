@@ -170,10 +170,12 @@ a{
     display: flex;
 }
 
-
+  /* about-our-food_section */
 .about-our-food_section{
     display: flex;
 }
+
+  /* about-our-food_section--->information */
 .about-our-food_section_information{
     margin-left: 200px;
     padding-top: 110px;
@@ -218,6 +220,8 @@ a{
     margin-top: 30px;
     text-decoration: none;
 }
+
+  /* about-our-food_section--->image */
 .about-our-food_section_image{
     width: 100%;
 }
@@ -228,7 +232,7 @@ a{
     height: 524px;
 }
 
-
+  /* our-food-dishs_section */
 .our-food-dishs_section{
     display: flex;
     align-items: center;
@@ -236,6 +240,8 @@ a{
     margin-right: 10%;
     padding: 90px 0;
 }
+
+  /* our-food-dishs_section--->image-collection */
 .our-food-dishs_section_image-collection{
     display: grid;
     grid-template-columns: auto auto;
@@ -249,6 +255,8 @@ a{
 .our-food-dishs_section_image-collection img:hover{
     border: 10px solid var(--btn-black);
 }
+
+  /* our-food-dishs_section--->information */
 .our-food-dishs_section_information{
     text-align: right;
     padding-left: 50px;
@@ -294,6 +302,7 @@ a{
     text-decoration: none;
 }
 
+  /* whats-hot_section */
 .whats-hot_section{
     padding: 90px 0;
     display: flex;
@@ -304,6 +313,8 @@ a{
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+  /* whats-hot_section--->heading */
 .whats-hot_section-heading{
     display: flex;
     align-items: center;
@@ -327,6 +338,7 @@ a{
     background-color: var(--btn-blue);
 }
 
+  /* whats-hot_section--->detail */
 .detail{
     margin-top: 20px;
     color: var(--p);
@@ -337,6 +349,7 @@ a{
     margin-left: -430px;
 }
 
+  /* whats-hot_section--->menue-slideShow */
 .whats-hot_section_menue-slideShow{
     display: flex;
     border: 1px solid #c2c2c2;
@@ -371,4 +384,83 @@ a{
 .whats-hot_section_menue-slideShow_slider img{
     width: 230px;
     height: 180px;
+}
+
+  /* social-way */
+.social-way{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 110px;
+    background-image: url("./images/app-bg.jpg");
+    height: 500px;
+}
+.man{
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+    vertical-align: middle;
+    border-style: none;
+    height: 600px; 
+}
+
+  /* social-way--->details */
+.social-way_details{
+    padding-top: 60px;
+    padding-left: 50%;
+    padding-right: 10%;
+}
+.social-way_details h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 35px;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: var(--white);
+}
+.social-way_details h2 span{
+    font-size: 1.5em;
+}
+.social-way_details p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--white);
+    text-align: left;
+}
+
+  /* social-way--->details--->button */
+.social-way_details_button{
+    margin-top: 35px;
+}
+.social-way_details_button a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.social-way_details_button a img{
+    max-width: 100%
+}
+
+.comment_header{
+    display: flex;
+    align-items: center;
+    direction: rtl;
+}
+.comment_header hr{
+    margin: 0 10px;
+    border: none;
+    width: 200px;
+    max-width: 200px;
+    height: 3px;
+    background-color: var(--btn-blue);
+}
+.comment_header h2{
+    font-weight: bold;
+    color: var(--h2);
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
 }
