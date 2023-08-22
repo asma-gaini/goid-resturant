@@ -501,6 +501,8 @@ a{
     font-weight: 500;
     line-height: 1.2;
 }
+
+  /*comment--->comment_show--->carousel */
 .comment_show_carousel{
     display: flex;
     justify-content: center;
@@ -512,4 +514,73 @@ a{
 }
 .comment_show_carousel li{
     padding: 0px 10px;
+}
+
+  /* information */
+.information_header h2{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 45px;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+.information_formBox{
+    display: flex;
+    align-items: center;
+    padding-left: 250px;
+}
+
+  /* information -->right*/
+.information_formBox_right{
+    width: 40%;
+}
+.information_formBox_right_contact a{
+    text-decoration: none;
+    margin-bottom: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.information_formBox_right_contact a img{
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    border: 1px solid var(--information-box);
+}
+.information_formBox_right_contact a h6{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-left: 20px;
+    margin-top: 0;
+    color: var(--information-box);
+    text-align: left;
+}
+
+  /* information --->left*/
+.information_formBox_left{
+    width: 60%;
+}
+.information_formBox_left_form-container form{
+    display: flex;
+    flex-direction: column;
+}
+.information_formBox_left_form-container form input{
+    width: 60%;
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 1px solid var(--information-box);
+    outline: none;
+}
+.information_formBox_left_form-container form button{
+    background-color: transparent;
+    border: 2px solid var(--btn-blue);
+    color: var(--btn-blue);
+    text-transform: uppercase;
+    padding: 6px 40px;
+    border-radius: 25px;
+    margin-top: 45px;
+    width: 60px;
 }
