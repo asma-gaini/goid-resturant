@@ -49,7 +49,7 @@ class sliderComment{
     // }
 
     setInterval() {
-        this.intervalID = setInterval(() => this.changeSlide(), 5000);
+        this.intervalID = setInterval(() => this.changeSlide(), 3000);
     }
 
 }
